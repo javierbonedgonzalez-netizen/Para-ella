@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f7e8ef">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Para ti 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--2"></div>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <main class="app">
+    <header class="header">
+      <p class="header__eyebrow">Hecho con cariño por Tu Javi</p>
+      <h1 class="header__title">Para ti, <span id="her-name">mi niña favorita y especial</span></h1>
+      <p class="header__subtitle" id="greeting">Un pequeño respiro cuando lo necesites</p>
+    </header>
+
+    <nav class="nav" role="tablist" aria-label="Secciones">
+      <button class="nav__btn nav__btn--active" data-tab="inicio" role="tab" aria-selected="true">Inicio</button>
+      <button class="nav__btn" data-tab="respirar" role="tab" aria-selected="false">Respirar</button>
+      <button class="nav__btn" data-tab="mensajes" role="tab" aria-selected="false">Mensajes</button>
+      <button class="nav__btn" data-tab="calma" role="tab" aria-selected="false">Calma</button>
+    </nav>
+
+    <!-- INICIO -->
+    <section class="panel panel--active" id="inicio" role="tabpanel">
+      <div class="card card--hero">
+        <div class="card__icon">🌸</div>
+        <h2>Hoy también mereces paz</h2>
+        <p>No hace falta hacer nada perfecto. Solo quedarte un momento contigo, con calma, sabiendo que alguien te quiere muchísimo.</p>
+        <button class="btn btn--primary" id="btn-comfort">Necesito un abrazo</button>
+      </div>
+
+      <div class="quick-grid">
+        <button class="quick-card" data-go="respirar">
+          <span>🫧</span>
+          <strong>Respirar</strong>
+          <small>2 minutos contigo</small>
+        </button>
+        <button class="quick-card" data-go="mensajes">
+          <span>💌</span>
+          <strong>Mensajes</strong>
+          <small>Palabras para ti</small>
+        </button>
+        <button class="quick-card" data-go="calma">
+          <span>✨</span>
+          <strong>Calma</strong>
+          <small>Suelta la tensión</small>
+        </button>
+      </div>
+
+      <div class="card card--gratitude">
+        <h3>Una cosa bonita de hoy</h3>
+        <textarea id="gratitude-input" placeholder="Algo que te haya hecho sonreír, por pequeño que sea..." rows="3"></textarea>
+        <p class="gratitude-saved" id="gratitude-saved" hidden>Guardado en tu corazoncito local 💗</p>
+      </div>
+    </section>
+
+    <!-- RESPIRAR -->
+    <section class="panel" id="respirar" role="tabpanel" hidden>
+      <div class="card card--breath">
+        <h2>Respira conmigo</h2>
+        <p class="breath-hint">Sigue el círculo. No tienes que pensar en nada más.</p>
+
+        <div class="breath-stage">
+          <div class="breath-ring breath-ring--outer"></div>
+          <div class="breath-ring breath-ring--inner"></div>
+          <div class="breath-circle" id="breath-circle">
+            <span id="breath-label">Listo</span>
+            <small id="breath-counter"></small>
+          </div>
+        </div>
+
+        <p class="breath-phase" id="breath-phase">Cuando quieras, empezamos.</p>
+
+        <div class="breath-actions">
+          <button class="btn btn--primary" id="btn-breath-start">Empezar</button>
+          <button class="btn btn--ghost" id="btn-breath-stop" hidden>Parar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENSAJES -->
+    <section class="panel" id="mensajes" role="tabpanel" hidden>
+      <div class="card card--message">
+        <p class="message-quote" id="message-text"></p>
+        <p class="message-from">— Javi</p>
+        <div class="message-actions">
+          <button class="btn btn--ghost" id="btn-prev-message" aria-label="Mensaje anterior">←</button>
+          <button class="btn btn--primary" id="btn-next-message">Otro mensaje</button>
+        </div>
+      </div>
+
+      <div class="card card--affirmations">
+        <h3>Recuerda esto</h3>
+        <ul class="affirmation-list" id="affirmation-list"></ul>
+      </div>
+    </section>
+
+    <!-- CALMA -->
+    <section class="panel" id="calma" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Burbujas de calma</h2>
+        <p>Toca las burbujas para soltar un poquito de estrés. No hay prisa.</p>
+        <canvas id="bubble-canvas" aria-label="Área de burbujas interactivas"></canvas>
+        <p class="bubble-count">Burbujas soltadas: <span id="bubble-count">0</span></p>
+      </div>
+
+      <div class="card card--sounds">
+        <h3>Sonido suave</h3>
+        <div class="sound-grid">
+          <button class="sound-btn" data-sound="rain">🌧️ Lluvia</button>
+          <button class="sound-btn" data-sound="heartbeat">💓 Latido</button>
+          <button class="sound-btn" data-sound="off">🔇 Silencio</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal abrazo -->
+  <dialog class="comfort-modal" id="comfort-modal">
+    <div class="comfort-modal__content">
+      <div class="comfort-modal__emoji">🤍</div>
+      <h2>Te abrazo fuerte</h2>
+      <p id="comfort-text"></p>
+      <button class="btn btn--primary" id="btn-close-comfort">Gracias</button>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

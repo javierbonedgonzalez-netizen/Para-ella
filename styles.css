@@ -444,4 +444,25 @@ input:focus {
   display: block;
   object-fit: cover;
 }
-  
+  .comfort-box {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  padding: 20px;
+  margin: 18px 0 22px;
+  text-align: center;
+}
+
+.comfort-box p {
+  margin: 0 0 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+#foto-abrazo {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  object-fit: cover;
+}

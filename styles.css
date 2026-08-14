@@ -459,7 +459,7 @@ input:focus {
 }
 .breath-image {
   width: 100%;
-  max-width: 520px;
+  max-width: 280px;
   height: auto;
   display: block;
   margin: 20px auto;

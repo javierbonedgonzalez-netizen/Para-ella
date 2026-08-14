@@ -468,3 +468,59 @@ input:focus {
   object-fit: cover;
   box-shadow: 0 12px 30px rgba(207, 111, 152, 0.18);
 }
+.comfort-modal {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 90vw;
+}
+
+.comfort-modal::backdrop {
+  background: rgba(79, 53, 64, 0.28);
+  backdrop-filter: blur(4px);
+}
+
+.comfort-modal__content {
+  width: min(90vw, 440px);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(201, 107, 138, 0.25);
+}
+
+.comfort-modal__emoji {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.comfort-modal__content h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 30px;
+}
+
+.comfort-box {
+  width: 100%;
+  background: rgba(255, 247, 250, 0.9);
+  border-radius: 22px;
+  padding: 18px;
+  margin: 16px 0 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.comfort-box #comfort-text {
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.comfort-box #foto-abrazo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  margin: 12px auto 0;
+  border-radius: 18px;
+  object-fit: cover;
+}

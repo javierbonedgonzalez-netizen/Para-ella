@@ -459,10 +459,9 @@ input:focus {
 }
 .breath-video {
   width: 100%;
-  max-width: 420px;
-  height: auto;
+  max-width: 520px;
   display: block;
-  margin: 22px auto;
+  margin: 20px auto;
   border-radius: 24px;
   object-fit: cover;
   box-shadow: 0 12px 30px rgba(207, 111, 152, 0.18);

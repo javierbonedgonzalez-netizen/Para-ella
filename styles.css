@@ -435,5 +435,13 @@ input:focus {
 .btn--primary:active {
   transform: scale(0.97);
 }
-
+#foto-abrazo {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 24px;
+  display: block;
+  object-fit: cover;
+}
   

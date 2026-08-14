@@ -500,27 +500,5 @@ input:focus {
   font-size: 30px;
 }
 
-.comfort-box {
-  width: 100%;
-  background: rgba(255, 247, 250, 0.9);
-  border-radius: 22px;
-  padding: 18px;
-  margin: 16px 0 20px;
-  text-align: center;
-  overflow: hidden;
-}
 
-.comfort-box #comfort-text {
-  margin: 0 0 14px;
-  line-height: 1.6;
-}
-
-.comfort-box #foto-abrazo {
-  display: block;
-  width: 180px;
-  max-width: 100%;
-  height: auto;
-  margin: 12px auto 0;
-  border-radius: 18px;
-  object-fit: cover;
 }

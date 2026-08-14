@@ -450,11 +450,11 @@ input:focus {
 }
 
 .comfort-box #foto-abrazo {
-  display: block;
-  width: 180px;
-  max-width: 100%;
-  height: auto;
-  margin: 12px auto 0;
+  display: block !important;
+  width: 180px !important;
+  max-width: 180px !important;
+  height: auto !important;
+  margin: 12px auto 0 !important;
   border-radius: 18px;
   object-fit: cover;
 }

@@ -435,3 +435,9 @@ input:focus {
 .btn--primary:active {
   transform: scale(0.97);
 }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
